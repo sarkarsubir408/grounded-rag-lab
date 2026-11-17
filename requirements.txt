@@ -1,0 +1,12 @@
+# Runtime and retrieval dependencies. Python 3.11 is the validated target.
+sentence-transformers==6.3.0
+scikit-learn==1.9.1
+numpy==2.4.6
+rank-bm25==0.2.2
+openai==3.50.0
+streamlit==1.67.0
+pypdf==7.0.1
+python-dotenv==1.2.4
+
+# Test dependency
+pytest==9.2.0

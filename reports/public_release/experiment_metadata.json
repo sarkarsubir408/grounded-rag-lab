@@ -1,0 +1,91 @@
+{
+  "experiment_type": "retrieval_only",
+  "generated_at_utc": "2026-11-16T15:26:37.160262+00:00",
+  "corpus_fingerprint": "355cca24544ce738ec98687bc5480c67827a51fbd04b07185a227a1d24569c8c",
+  "document_count": 6,
+  "dataset_version": "public-release-1.0-reviewed",
+  "question_count": 25,
+  "validation_question_count": 8,
+  "validation_question_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08"
+  ],
+  "test_question_count": 17,
+  "test_question_ids": [
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05",
+    "T06",
+    "T07",
+    "T08",
+    "T09",
+    "T10",
+    "T11",
+    "T12",
+    "T13",
+    "T14",
+    "T15",
+    "T16",
+    "T17"
+  ],
+  "answerable_test_questions": 15,
+  "unanswerable_test_questions": 2,
+  "retrieval_methods": [
+    "dense",
+    "bm25",
+    "hybrid"
+  ],
+  "chunk_configurations": [
+    {
+      "chunk_size": 100,
+      "overlap": 20
+    },
+    {
+      "chunk_size": 150,
+      "overlap": 20
+    },
+    {
+      "chunk_size": 100,
+      "overlap": 0
+    },
+    {
+      "chunk_size": 100,
+      "overlap": 40
+    }
+  ],
+  "completed_combinations": 12,
+  "k_values": [
+    3,
+    5
+  ],
+  "metrics": {
+    "precision": "Relevant retrieved chunks divided by the number returned (up to K).",
+    "recall": "Unique relevant chunk IDs retrieved divided by all relevant chunk IDs for that configuration.",
+    "hit_rate": "Whether at least one relevant chunk appears in the first K.",
+    "mrr": "Reciprocal rank of the first relevant chunk, or zero.",
+    "ndcg": "Binary-gain discounted ranking score normalized against the ideal ordering."
+  },
+  "unanswerable_handling": "Unanswerable test questions retain empty gold evidence. Existing retrieval_metrics returns null for ranking metrics on empty qrels; CSV cells are blank, these rows remain in per-query output, and they are excluded from answerable-query macro averages but counted in summaries.",
+  "validation_questions_used_for_test_metrics": false,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "embedding_dimensions": 384,
+  "rrf_constant": 60,
+  "per_query_row_count": 408,
+  "macro_summary_row_count": 24,
+  "failed_question_ids": [],
+  "missing_evidence_mappings": [],
+  "calibration_performed": false,
+  "thresholds_calculated_or_changed": false,
+  "calibration_artifacts_written_or_changed": false,
+  "answer_generation_performed": false,
+  "openai_api_calls_made": 0
+}

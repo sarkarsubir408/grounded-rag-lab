@@ -1,0 +1,491 @@
+{
+  "dataset_version": "public-release-1.0-reviewed",
+  "created_date": "2026-11-16",
+  "annotation_policy": "All 25 question wordings and answerability labels were approved by the project owner on 2026-11-16. Answerable evidence references are mapped to existing corpus passages; unanswerable questions intentionally have no gold evidence IDs. Approval does not claim independently measured retrieval or answer quality.",
+  "splits": {
+    "validation": "Used only to select an abstention threshold for the 100/20 application configuration (C01-C08).",
+    "test": "Held out for retrieval and answer evaluation; never used for threshold selection (T01-T17)."
+  },
+  "questions": [
+    {
+      "id": "C01",
+      "split": "validation",
+      "question": "Which measurement units can a fixed-size chunker use to decide how much text to place in a chunk?",
+      "answerable": true,
+      "reference_answer": "The split amount can be measured in words, characters, or tokens.",
+      "evidence": [
+        {
+          "doc_id": "chunking_guide_0dab41fe",
+          "passage_id": "chunking_guide_0dab41fe:p0004"
+        }
+      ],
+      "rationale": "Directly identifies the units named for fixed-size splitting.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "C02",
+      "split": "validation",
+      "question": "Which kinds of document cues may guide the boundaries chosen by semantic chunking?",
+      "answerable": true,
+      "reference_answer": "Boundaries may follow headings, paragraphs, sentence meaning, or a combination of signals.",
+      "evidence": [
+        {
+          "doc_id": "chunking_guide_0dab41fe",
+          "passage_id": "chunking_guide_0dab41fe:p0010"
+        }
+      ],
+      "rationale": "Directly lists the structural and meaning-based cues for semantic boundaries.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "C03",
+      "split": "validation",
+      "question": "Why might a fixed cosine-similarity cutoff behave differently across search questions or collections?",
+      "answerable": true,
+      "reference_answer": "Cosine similarity is not a calibrated relevance probability, and a fixed cutoff can vary in behavior across queries and corpora.",
+      "evidence": [
+        {
+          "doc_id": "dense_embeddings",
+          "passage_id": "dense-03"
+        }
+      ],
+      "rationale": "The cited dense-retrieval passage states that similarity cutoffs vary and are not calibrated probabilities.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "C04",
+      "split": "validation",
+      "question": "How does BM25 change the contribution of repeated occurrences of a query term?",
+      "answerable": true,
+      "reference_answer": "Repetition can increase a passage's score, but each additional occurrence contributes less than the previous one.",
+      "evidence": [
+        {
+          "doc_id": "bm25_retrieval",
+          "passage_id": "bm25-02"
+        }
+      ],
+      "rationale": "The cited passage defines term-frequency saturation and diminishing additional contribution.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "C05",
+      "split": "validation",
+      "question": "Why can RRF combine dense and BM25 rankings without first normalizing their raw score scales?",
+      "answerable": true,
+      "reference_answer": "RRF combines positions in ranked lists rather than the retrievers' original score magnitudes.",
+      "evidence": [
+        {
+          "doc_id": "hybrid_rrf",
+          "passage_id": "hybrid-04"
+        }
+      ],
+      "rationale": "The cited passage explains that RRF fuses rank positions rather than raw score magnitudes.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "C06",
+      "split": "validation",
+      "question": "Which exact chunk-size and overlap pair does the corpus identify as the approved default for the public-release experiments?",
+      "answerable": false,
+      "reference_answer": "The corpus does not specify an approved public-release chunk-size and overlap pair.",
+      "evidence": [],
+      "rationale": "The guide describes general trade-offs and says there is no universally best size, but it does not report a selected public-release experiment configuration.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "C07",
+      "split": "validation",
+      "question": "What must happen to the index after a source document changes for retrieval to reflect the updated corpus?",
+      "answerable": true,
+      "reference_answer": "The index must be refreshed.",
+      "evidence": [
+        {
+          "doc_id": "rag_workflow",
+          "passage_id": "rag-06"
+        }
+      ],
+      "rationale": "The cited workflow passage states that the index must be refreshed after source changes.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "C08",
+      "split": "validation",
+      "question": "What numeric abstention threshold for Dense retrieval is specified in these corpus documents?",
+      "answerable": false,
+      "reference_answer": "The corpus does not provide a numeric Dense-retrieval abstention threshold.",
+      "evidence": [],
+      "rationale": "The evaluation document describes using validation data to select a threshold and calls small-set results provisional, but it contains no selected threshold value.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T01",
+      "split": "test",
+      "question": "Which three components does the BM25 summary say contribute to a document's score?",
+      "answerable": true,
+      "reference_answer": "Query-term occurrence, inverse document frequency, and document-length normalization.",
+      "evidence": [
+        {
+          "doc_id": "bm25_retrieval",
+          "passage_id": "bm25-01"
+        }
+      ],
+      "rationale": "The cited passage lists BM25 query-term occurrence, inverse document frequency, and length normalization.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T02",
+      "split": "test",
+      "question": "Why do terms common across a whole collection usually distinguish documents less effectively?",
+      "answerable": true,
+      "reference_answer": "Common collection-wide terms usually provide less discrimination than terms that are less common across the collection.",
+      "evidence": [
+        {
+          "doc_id": "bm25_retrieval",
+          "passage_id": "bm25-01"
+        }
+      ],
+      "rationale": "The cited passage explains the lower discriminative value of collection-wide common terms.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T03",
+      "split": "test",
+      "question": "What vocabulary difference can cause lexical retrieval to miss a relevant passage?",
+      "answerable": true,
+      "reference_answer": "A passage may express the same concept with different vocabulary from the query.",
+      "evidence": [
+        {
+          "doc_id": "bm25_retrieval",
+          "passage_id": "bm25-03"
+        }
+      ],
+      "rationale": "The cited passage explicitly describes vocabulary mismatch as a lexical retrieval limitation.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T04",
+      "split": "test",
+      "question": "Which stemming algorithm does the corpus recommend for preparing text for BM25?",
+      "answerable": false,
+      "reference_answer": "The corpus does not recommend a stemming algorithm for BM25.",
+      "evidence": [],
+      "rationale": "The document notes that tokenization choices affect ranking, but it neither identifies nor recommends a stemming algorithm.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T05",
+      "split": "test",
+      "question": "What kinds of content may be more difficult for dense retrieval than semantic paraphrases?",
+      "answerable": true,
+      "reference_answer": "Rare names, identifiers, numbers, and exact phrases can be harder for dense retrieval.",
+      "evidence": [
+        {
+          "doc_id": "dense_embeddings",
+          "passage_id": "dense-04"
+        }
+      ],
+      "rationale": "The cited passage lists content types for which dense retrieval can be weaker.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T06",
+      "split": "test",
+      "question": "How can embeddings help retrieve a passage whose wording differs from the question?",
+      "answerable": true,
+      "reference_answer": "Texts with related meanings can map to nearby vectors, allowing retrieval by conceptual similarity despite different wording.",
+      "evidence": [
+        {
+          "doc_id": "dense_embeddings",
+          "passage_id": "dense-01"
+        }
+      ],
+      "rationale": "The cited passage explains how nearby vectors support concept retrieval despite wording differences.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T07",
+      "split": "test",
+      "question": "What kinds of domain material can make a corpus useful beyond relying on a language model's training data alone?",
+      "answerable": true,
+      "reference_answer": "Material that is private, recent, or specific to the domain can be supplied through a corpus.",
+      "evidence": [
+        {
+          "doc_id": "rag_workflow",
+          "passage_id": "rag-01"
+        }
+      ],
+      "rationale": "The cited passage lists private, recent, and domain-specific material as corpus use cases.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T08",
+      "split": "test",
+      "question": "What sequence of operations describes the simple RAG workflow?",
+      "answerable": true,
+      "reference_answer": "Load and normalize documents, split them into passages, index the passages, retrieve candidates, assemble context, and generate an answer.",
+      "evidence": [
+        {
+          "doc_id": "rag_workflow",
+          "passage_id": "rag-02"
+        }
+      ],
+      "rationale": "The cited passage enumerates the simple RAG workflow in order.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T09",
+      "split": "test",
+      "question": "How does keeping retrieval and generation separate help diagnose a RAG failure?",
+      "answerable": true,
+      "reference_answer": "It helps distinguish poor retrieved evidence from a model that uses good evidence incorrectly.",
+      "evidence": [
+        {
+          "doc_id": "rag_workflow",
+          "passage_id": "rag-02"
+        }
+      ],
+      "rationale": "The cited passage explains how separating stages helps identify retrieval versus generation failures.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T10",
+      "split": "test",
+      "question": "How should an application respond when the retrieved passages do not support an answer?",
+      "answerable": true,
+      "reference_answer": "It should abstain and explain that the available documents are insufficient.",
+      "evidence": [
+        {
+          "doc_id": "rag_workflow",
+          "passage_id": "rag-04"
+        }
+      ],
+      "rationale": "The cited passage directly recommends abstention and an insufficiency explanation when evidence is missing.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T11",
+      "split": "test",
+      "question": "Which source details should be retained with a passage so it can be traced after ingestion?",
+      "answerable": true,
+      "reference_answer": "The application should retain document identity and passage metadata.",
+      "evidence": [
+        {
+          "doc_id": "rag_workflow",
+          "passage_id": "rag-06"
+        }
+      ],
+      "rationale": "The cited passage names document identity and passage metadata as traceability information.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T12",
+      "split": "test",
+      "question": "Under which document conditions can semantic chunking still choose a poor boundary?",
+      "answerable": true,
+      "reference_answer": "It can fail when headings are missing or topics shift abruptly.",
+      "evidence": [
+        {
+          "doc_id": "chunking_guide_0dab41fe",
+          "passage_id": "chunking_guide_0dab41fe:p0011"
+        }
+      ],
+      "rationale": "The cited passage states two conditions under which semantic splitting can fail.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T13",
+      "split": "test",
+      "question": "What happens to the difference between adjacent ranks when the RRF constant is made larger?",
+      "answerable": true,
+      "reference_answer": "The difference between adjacent ranks becomes narrower.",
+      "evidence": [
+        {
+          "doc_id": "hybrid_rrf",
+          "passage_id": "hybrid-03"
+        }
+      ],
+      "rationale": "The cited passage states how a larger RRF constant changes adjacent-rank differences.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T14",
+      "split": "test",
+      "question": "What does an RRF score indicate about whether an answer is supported?",
+      "answerable": true,
+      "reference_answer": "An RRF score is not a confidence probability.",
+      "evidence": [
+        {
+          "doc_id": "hybrid_rrf",
+          "passage_id": "hybrid-04"
+        }
+      ],
+      "rationale": "The cited passage explicitly distinguishes an RRF score from a confidence probability.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T15",
+      "split": "test",
+      "question": "How should data be split when choosing an abstention threshold and evaluating the selected threshold?",
+      "answerable": true,
+      "reference_answer": "Choose the threshold using validation data, then evaluate it on a separate test split.",
+      "evidence": [
+        {
+          "doc_id": "retrieval_evaluation",
+          "passage_id": "eval-05"
+        }
+      ],
+      "rationale": "The cited passage specifies validation for selection and a separate test split for evaluation.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T16",
+      "split": "test",
+      "question": "What does nDCG account for when relevance judgments have more than one grade?",
+      "answerable": true,
+      "reference_answer": "It rewards relevant results near the top while accounting for graded relevance.",
+      "evidence": [
+        {
+          "doc_id": "retrieval_evaluation",
+          "passage_id": "eval-03"
+        }
+      ],
+      "rationale": "The cited passage explains nDCG behavior when relevance judgments are graded.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    },
+    {
+      "id": "T17",
+      "split": "test",
+      "question": "What Recall@5 value did Hybrid retrieval achieve in the public-release corpus experiment?",
+      "answerable": false,
+      "reference_answer": "The corpus does not report a Hybrid Recall@5 result.",
+      "evidence": [],
+      "rationale": "The corpus explains retrieval metrics and evaluation practice but contains no benchmark result table or measured Hybrid Recall@5 value.",
+      "review_status": "human-reviewed; approved by project owner on 2026-11-16",
+      "review_decision": {
+        "decision": "approved",
+        "reviewer": "project owner (user)",
+        "date": "2026-11-16"
+      }
+    }
+  ]
+}

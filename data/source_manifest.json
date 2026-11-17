@@ -1,0 +1,92 @@
+{
+  "retrieved_date": "2026-11-13",
+  "content_policy": "The five added corpus files are original project-authored summaries. No third-party prose was copied. License fields identify the source repository or documentation terms checked on the retrieval date; they do not relicense the source itself.",
+  "sources": [
+    {
+      "doc_id": "chunking_guide_0dab41fe",
+      "local_filename": "chunking_guide.md",
+      "title": "Document Chunking for Retrieval-Augmented Generation",
+      "source_url": "",
+      "license_or_provenance": "AI-generated synthetic educational project content created with ChatGPT assistance. No external source URL or exact generation prompt is available. No claim is made about exclusive ownership or copyright uniqueness. This content is excluded from the project's MIT software license under CONTENT_NOTICE.md.",
+      "content_kind": "AI-generated synthetic educational project content"
+    },
+    {
+      "doc_id": "rag_workflow",
+      "local_filename": "rag_workflow.md",
+      "title": "RAG workflow and grounded answers",
+      "source_url": "https://github.com/openai/openai-cookbook/blob/main/examples/data/oai_docs/optimizing-llm-accuracy.txt",
+      "retrieved_date": "2026-11-13",
+      "license_or_provenance": "Original summary by this project. Source resides in the OpenAI Cookbook repository under MIT License; no source wording reproduced.",
+      "license_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/LICENSE",
+      "content_kind": "project-authored summary"
+    },
+    {
+      "doc_id": "dense_embeddings",
+      "local_filename": "dense_embeddings.md",
+      "title": "Dense retrieval and text embeddings",
+      "source_url": "https://github.com/huggingface/sentence-transformers/blob/main/examples/sentence_transformer/applications/semantic-search/README.md",
+      "retrieved_date": "2026-11-13",
+      "license_or_provenance": "Original summary by this project. Sentence Transformers repository is Apache-2.0; no source wording reproduced.",
+      "license_url": "https://raw.githubusercontent.com/huggingface/sentence-transformers/main/LICENSE",
+      "content_kind": "project-authored summary"
+    },
+    {
+      "doc_id": "bm25_retrieval",
+      "local_filename": "bm25_retrieval.md",
+      "title": "BM25 lexical retrieval",
+      "source_url": "https://github.com/dorianbrown/rank_bm25/blob/master/README.md",
+      "retrieved_date": "2026-11-13",
+      "license_or_provenance": "Original summary by this project. rank_bm25 repository is Apache-2.0; no README prose reproduced.",
+      "license_url": "https://raw.githubusercontent.com/dorianbrown/rank_bm25/master/LICENSE",
+      "content_kind": "project-authored summary"
+    },
+    {
+      "doc_id": "bm25_retrieval",
+      "local_filename": "bm25_retrieval.md",
+      "title": "BM25 background paper referenced by rank_bm25",
+      "source_url": "https://www.cs.otago.ac.nz/homepages/andrew/papers/2014-2.pdf",
+      "retrieved_date": "2026-11-13",
+      "license_or_provenance": "Bibliographic reference only; copyright/reuse terms not established; no text copied.",
+      "content_kind": "bibliographic source"
+    },
+    {
+      "doc_id": "hybrid_rrf",
+      "local_filename": "hybrid_rrf.md",
+      "title": "Hybrid retrieval with reciprocal rank fusion",
+      "source_url": "https://docs.opensearch.org/latest/vector-search/ai-search/hybrid-search/rrf/",
+      "retrieved_date": "2026-11-13",
+      "license_or_provenance": "Original summary by this project. OpenSearch documentation source repository is Apache-2.0; no source wording reproduced.",
+      "license_url": "https://raw.githubusercontent.com/opensearch-project/documentation-website/main/LICENSE",
+      "content_kind": "project-authored summary"
+    },
+    {
+      "doc_id": "hybrid_rrf",
+      "local_filename": "hybrid_rrf.md",
+      "title": "Reciprocal Rank Fusion paper (Cormack, Clarke, Buettcher, SIGIR 2009)",
+      "source_url": "https://doi.org/10.1145/1571941.1572114",
+      "retrieved_date": "2026-11-13",
+      "license_or_provenance": "Bibliographic reference only; ACM paper text is not redistributed and no open reuse license was identified.",
+      "content_kind": "bibliographic source"
+    },
+    {
+      "doc_id": "retrieval_evaluation",
+      "local_filename": "retrieval_evaluation.md",
+      "title": "Retrieval and answer evaluation",
+      "source_url": "https://github.com/beir-cellar/beir/wiki/Metrics-available",
+      "retrieved_date": "2026-11-13",
+      "license_or_provenance": "Original summary by this project. BEIR repository is Apache-2.0; no source wording reproduced.",
+      "license_url": "https://raw.githubusercontent.com/beir-cellar/beir/main/LICENSE",
+      "content_kind": "project-authored summary"
+    },
+    {
+      "doc_id": "retrieval_evaluation",
+      "local_filename": "retrieval_evaluation.md",
+      "title": "OpenAI Cookbook evaluation guidance",
+      "source_url": "https://github.com/openai/openai-cookbook/blob/main/examples/data/oai_docs/prompt-engineering.txt",
+      "retrieved_date": "2026-11-13",
+      "license_or_provenance": "Original summary by this project. OpenAI Cookbook repository is MIT; no source wording reproduced.",
+      "license_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/LICENSE",
+      "content_kind": "project-authored summary"
+    }
+  ]
+}

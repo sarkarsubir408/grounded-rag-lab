@@ -1,0 +1,10 @@
+[project]
+name = "rag-portfolio-project"
+version = "0.1.0"
+description = "Dense, BM25, and RRF hybrid retrieval experiments with a gated OpenAI Responses API RAG application"
+requires-python = ">=3.11,<3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"

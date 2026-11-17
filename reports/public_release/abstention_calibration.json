@@ -1,0 +1,75 @@
+{
+  "dataset_status": "human-reviewed validation annotations; threshold calibration remains provisional because it uses only 8 validation questions",
+  "split_used": "validation only",
+  "test_split_used_for_calibration": false,
+  "calibration_configuration": {
+    "chunk_size": 100,
+    "overlap": 20
+  },
+  "calibration_top_k": 5,
+  "rrf_constant": 60,
+  "corpus_fingerprint": "355cca24544ce738ec98687bc5480c67827a51fbd04b07185a227a1d24569c8c",
+  "retrievers": {
+    "dense": {
+      "threshold": 0.5586917400360107,
+      "objective": "validation balanced accuracy; tie-break minimizes false-positive rate",
+      "validation_count": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "balanced_accuracy": 1.0,
+      "false_positive_rate": 0.0,
+      "status": "provisional; validation score is a decision signal, not a probability",
+      "signal_definition": "maximum cosine similarity among the top-5 dense results"
+    },
+    "bm25": {
+      "threshold": 9.107469618115733,
+      "objective": "validation balanced accuracy; tie-break minimizes false-positive rate",
+      "validation_count": 8,
+      "precision": 0.8571428571428571,
+      "recall": 1.0,
+      "specificity": 0.5,
+      "f1": 0.923076923076923,
+      "balanced_accuracy": 0.75,
+      "false_positive_rate": 0.5,
+      "status": "provisional; validation score is a decision signal, not a probability",
+      "signal_definition": "maximum BM25 score among the top-5 BM25 results"
+    },
+    "hybrid": {
+      "threshold": 0.5586917400360107,
+      "objective": "validation balanced accuracy; tie-break minimizes false-positive rate",
+      "validation_count": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "balanced_accuracy": 1.0,
+      "false_positive_rate": 0.0,
+      "status": "provisional; validation score is a decision signal, not a probability",
+      "signal_definition": "maximum dense cosine similarity among the top-5 RRF results; RRF score itself is not treated as confidence"
+    }
+  },
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "embedding_dimensions": 384,
+  "dataset_version": "public-release-1.0-reviewed",
+  "annotation_review_date": "2026-11-16",
+  "annotation_review_status": "8/8 validation questions approved; 25/25 dataset annotations owner-approved",
+  "validation_question_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08"
+  ],
+  "validation_answerable_count": 6,
+  "validation_unanswerable_count": 2,
+  "calibration_method": "Existing calibrate_abstention_thresholds: validation balanced accuracy, with false-positive-rate tie-break.",
+  "test_question_ids_used": [],
+  "historical_thresholds_used_as_inputs": false,
+  "openai_api_calls_made": 0
+}
