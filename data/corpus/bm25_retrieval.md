@@ -4,7 +4,13 @@ title: BM25 lexical retrieval
 source_url: https://github.com/dorianbrown/rank_bm25/blob/master/README.md
 source_license: Apache-2.0 (rank_bm25 repository)
 retrieved_date: 2026-11-13
-provenance: Project-authored summary; no third-party prose copied. BM25 background references are listed in source_manifest.json.
+provenance: Project-authored summary. The rank_bm25 README is the software reference; the separate research-paper citation is recorded below and in data/source_manifest.json.
+paper_title: Improvements to BM25 and Language Models Examined
+paper_authors: Andrew Trotman; Antti Puurula; Blake Burgess
+paper_publication: Proceedings of the 19th Australasian Document Computing Symposium (ADCS '14), 2014, pp. 58–65
+paper_doi: 10.1145/2682862.2682863
+paper_reference_url: https://doi.org/10.1145/2682862.2682863
+paper_author_copy_url: https://cs.otago.ac.nz/homepages/andrew/papers/2014-2.pdf
 ---
 
 # BM25 lexical retrieval

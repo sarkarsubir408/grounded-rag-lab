@@ -7,8 +7,11 @@
       "local_filename": "chunking_guide.md",
       "title": "Document Chunking for Retrieval-Augmented Generation",
       "source_url": "",
-      "license_or_provenance": "AI-generated synthetic educational project content created with ChatGPT assistance. No external source URL or exact generation prompt is available. No claim is made about exclusive ownership or copyright uniqueness. This content is excluded from the project's MIT software license under CONTENT_NOTICE.md.",
-      "content_kind": "AI-generated synthetic educational project content"
+      "license_or_provenance": "AI-generated synthetic educational project content created with ChatGPT assistance, as confirmed by the project owner. The original prompt and generation records are unavailable; no external source URL was recorded; external provenance has not been independently established. A review found similar phrase structure and ideas in an external article but no exact full-sentence match. The original source and direction of similarity could not be established; the article is a review reference only, not an identified source. No claim of exclusive originality or legal clearance is made. The content is excluded from the project's MIT software license under CONTENT_NOTICE.md.",
+      "content_kind": "AI-generated synthetic educational project content",
+      "similarity_review_reference_title": "How to Build a RAG System: Architecture, Retrieval, Security, and Evaluation",
+      "similarity_review_reference_url": "https://geekchamp.com/how-to-build-your-own-rag-system-from-documents-to-reliable-answers/",
+      "similarity_review_date": "2026-11-17"
     },
     {
       "doc_id": "rag_workflow",
@@ -43,10 +46,18 @@
     {
       "doc_id": "bm25_retrieval",
       "local_filename": "bm25_retrieval.md",
-      "title": "BM25 background paper referenced by rank_bm25",
-      "source_url": "https://www.cs.otago.ac.nz/homepages/andrew/papers/2014-2.pdf",
-      "retrieved_date": "2026-11-13",
-      "license_or_provenance": "Bibliographic reference only; copyright/reuse terms not established; no text copied.",
+      "title": "Improvements to BM25 and Language Models Examined",
+      "authors": [
+        "Andrew Trotman",
+        "Antti Puurula",
+        "Blake Burgess"
+      ],
+      "publication": "Proceedings of the 19th Australasian Document Computing Symposium (ADCS '14), 2014, pp. 58–65",
+      "doi": "10.1145/2682862.2682863",
+      "source_url": "https://doi.org/10.1145/2682862.2682863",
+      "author_copy_url": "https://cs.otago.ac.nz/homepages/andrew/papers/2014-2.pdf",
+      "retrieved_date": "2026-11-17",
+      "license_or_provenance": "Bibliographic reference only; no paper text is included in the corpus document. The ACM record displays copyright and a limited permissions notice; no general reuse permission is claimed.",
       "content_kind": "bibliographic source"
     },
     {
@@ -74,17 +85,26 @@
       "title": "Retrieval and answer evaluation",
       "source_url": "https://github.com/beir-cellar/beir/wiki/Metrics-available",
       "retrieved_date": "2026-11-13",
-      "license_or_provenance": "Original summary by this project. BEIR repository is Apache-2.0; no source wording reproduced.",
+      "license_or_provenance": "Project summary reference. The page lists available metric names; the BEIR repository declares Apache-2.0, but a separate license for the GitHub wiki page was not established. No page-level reuse permission is claimed.",
       "license_url": "https://raw.githubusercontent.com/beir-cellar/beir/main/LICENSE",
       "content_kind": "project-authored summary"
     },
     {
       "doc_id": "retrieval_evaluation",
       "local_filename": "retrieval_evaluation.md",
-      "title": "OpenAI Cookbook evaluation guidance",
+      "title": "ir-measures metric definitions",
+      "source_url": "https://ir-measur.es/en/latest/measures.html",
+      "retrieved_date": "2026-11-17",
+      "license_or_provenance": "Direct technical reference for Precision@k, Recall@k, Success@k, RR/MRR, and nDCG definitions. In this project, Hit Rate@K is the per-query binary Success@K indicator and is distinct from Recall@K. The project paraphrases these definitions; no reuse permission for the documentation is claimed.",
+      "content_kind": "metric-definition reference"
+    },
+    {
+      "doc_id": "retrieval_evaluation",
+      "local_filename": "retrieval_evaluation.md",
+      "title": "OpenAI Cookbook general evaluation guidance",
       "source_url": "https://github.com/openai/openai-cookbook/blob/main/examples/data/oai_docs/prompt-engineering.txt",
       "retrieved_date": "2026-11-13",
-      "license_or_provenance": "Original summary by this project. OpenAI Cookbook repository is MIT; no source wording reproduced.",
+      "license_or_provenance": "General evaluation guidance only; this source does not define the retrieval metrics listed in retrieval_evaluation.md. The OpenAI Cookbook repository declares MIT; no source wording is reproduced.",
       "license_url": "https://raw.githubusercontent.com/openai/openai-cookbook/main/LICENSE",
       "content_kind": "project-authored summary"
     }

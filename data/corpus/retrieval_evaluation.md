@@ -2,9 +2,13 @@
 doc_id: retrieval_evaluation
 title: Retrieval and answer evaluation
 source_url: https://github.com/beir-cellar/beir/wiki/Metrics-available
-source_license: Apache-2.0 (BEIR repository)
+source_license: BEIR repository declares Apache-2.0; license for the GitHub wiki page is not established
 retrieved_date: 2026-11-13
-provenance: Project-authored summary; metric definitions paraphrased and cross-checked against BEIR and OpenAI Cookbook evaluation guidance.
+metric_definitions_source: ir-measures documentation (P, R, Success, RR/MRR, nDCG)
+metric_definitions_url: https://ir-measur.es/en/latest/measures.html
+hit_rate_reference_note: Project Hit Rate@K is the per-query binary Success@K indicator; it is distinct from Recall@K.
+evaluation_guidance_source: OpenAI Cookbook prompt-engineering evaluation guidance
+provenance: Project-authored summary; metric definitions checked against ir-measures documentation. The BEIR page lists available metrics, and the OpenAI Cookbook provides general evaluation guidance. No reuse permission is claimed for the referenced documentation.
 ---
 
 # Retrieval and answer evaluation
